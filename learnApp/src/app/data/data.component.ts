@@ -24,12 +24,12 @@ export class DataComponent implements OnInit{
   constructor(private service: DataService){
   }
 
-  getProducts(){
-    this.productList = this.service.getProducts();
-  }
+  // getProducts(){
+  //   this.productList = this.service.getProducts();
+  // }
 
   ngOnInit(): void{
-    this.getProducts();
+    //this.getProducts();
   }
   
   Order() : boolean{

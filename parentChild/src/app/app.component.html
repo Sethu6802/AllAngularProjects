@@ -1,0 +1,48 @@
+<span>
+  <h2>
+    {{title}} app is running!
+  </h2>
+</span>
+
+<div class = "conatiner">
+  <h4>Parent Component</h4>
+
+  <p>
+    To send whatever is entered in the text field to child component <br><br>
+
+    Enter the Name:
+    <input type = "text"
+            class="form-control"
+            [(ngModel)] = "EnterName" /> <br>
+    
+    Enter the Age:
+    <input  type = "text" 
+            class =  "form-control"
+            [(ngModel)] = "enterAge" /> <br>
+
+    Enter your Martial Status:
+    <input type = "text"
+            class = "form-control"
+            [(ngModel)] = "enterStatus" /><br>
+
+    <input type="button"
+            value = "send"
+            (click) = "transferData()" /><br>
+  </p>
+
+  <app-home
+    [parentData1] = 'parentData1'
+    [parentData2] = 'parentData2'
+    [parentData3] = 'parentData3'
+  ></app-home>
+
+  <h4>
+    Received from Child <br>
+  </h4>
+
+  <app-about (sendData) = "sendData($event)"></app-about>
+  <div style ="font-size: larger;font-weight: bold; display: flex; position: absolute; text-align: center;">
+    {{value}}
+  </div>  
+
+</div>
