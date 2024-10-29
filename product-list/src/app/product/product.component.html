@@ -1,0 +1,17 @@
+<h2>Product List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price | currency:'INR' }}</td>
+      <td>{{ product.createdAt | date:'mediumDate' }}</td>
+    </tr>
+  </tbody>
+</table>
