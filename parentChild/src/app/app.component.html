@@ -1,48 +1,63 @@
-<span>
-  <h2>
-    {{title}} app is running!
-  </h2>
-</span>
+<div class="container">
 
-<div class = "conatiner">
-  <h4>Parent Component</h4>
+  <div>
+    <h4>Parent Component</h4>
 
-  <p>
-    To send whatever is entered in the text field to child component <br><br>
+    <p>
+      To send whatever is entered in the text field to child component <br><br>
 
-    Enter the Name:
-    <input type = "text"
-            class="form-control"
-            [(ngModel)] = "EnterName" /> <br>
-    
-    Enter the Age:
-    <input  type = "text" 
-            class =  "form-control"
-            [(ngModel)] = "enterAge" /> <br>
+      <div class="input-group">
+        Enter the Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text"
+                style="border-radius: 10px; text-align: center;"
+               class="form-control"
+               [(ngModel)]="EnterName" />
+      </div>
 
-    Enter your Martial Status:
-    <input type = "text"
-            class = "form-control"
-            [(ngModel)] = "enterStatus" /><br>
+      <div class="input-group">
+        Enter the Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text"
+               style="border-radius: 10px; text-align: center;"
+               class="form-control"
+               [(ngModel)]="enterAge" />
+      </div>
 
-    <input type="button"
-            value = "send"
-            (click) = "transferData()" /><br>
-  </p>
+      <div class="input-group">
+        Enter your Martial Status:
+        <input type="text"
+                style="border-radius: 10px; text-align: center;"
+               class="form-control"
+               [(ngModel)]="enterStatus" />
+      </div>
 
-  <app-home
-    [parentData1] = 'parentData1'
-    [parentData2] = 'parentData2'
-    [parentData3] = 'parentData3'
-  ></app-home>
+      <input type="button"
+              style="left:30%; justify-content: space-between; width: 100px; position: relative;"
+             value="send"
+             (click)="transferData()" />
+  </div>
 
-  <h4>
-    Received from Child <br>
-  </h4>
+  <div class="text-right">
+    <app-home
+      [parentData1]="parentData1"
+      [parentData2]="parentData2"
+      [parentData3]="parentData3"
+    ></app-home>
+  </div>
 
-  <app-about (sendData) = "sendData($event)"></app-about>
-  <div style ="font-size: larger;font-weight: bold; display: flex; position: absolute; text-align: center;">
+  <div class="text-rightest">
+    <h4>
+      Received from Child
+    </h4>
+
+    <app-about (sendData)="sendData($event)"></app-about>
+
+  </div>
+
+  
+</div>
+
+<div>
+  <p style="font-size: larger; font-weight: bold; text-align: center;">
     {{value}}
-  </div>  
-
+  </p>  
 </div>

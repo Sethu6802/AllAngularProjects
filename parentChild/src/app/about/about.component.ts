@@ -11,6 +11,6 @@ export class AboutComponent {
   public sendData = new EventEmitter<string>();
 
   childMessage(){
-    this.sendData.emit('Hello from About Component');
+    setTimeout(()=>{this.sendData.emit('Hello from About Component')},1000);
   }
 }

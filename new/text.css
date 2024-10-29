@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: lightskyblue;
+    height: 50vh;
+    margin: 100px 100px 50px 50px;
+    align-content:center;
+    display: flex;
+    flex-direction:row;
+    
+    /* text-align: right;
+    
+    justify-content: end; */
+}
+
+.container2{
+    background-color: yellow;
+    height: 50vh;
+    margin:100px 100px 50px 50px;
+    align-content: center;
+    display: flex;
+
+    /*text-align: right;
+    
+    justify-content:right;*/
+}
+
+.child1{
+    background-color: red;
+    height: 90%;
+    width: 30%;
+    margin: 20px 10px 10px 20px;
+    overflow: auto;
+}
+
+.child2{
+    background-color: green;
+    height: 90%;
+    width: 30%;
+    margin: 20px 10px 10px 20px;
+}
+
+
+.child3{
+    background-color: blue;
+    height: 90%;
+    width: 30%;
+    margin: 20px 10px 10px 30px;
+    overflow: auto;
+}
