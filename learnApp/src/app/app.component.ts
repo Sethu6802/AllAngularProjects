@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenService } from './token.service';
 
 @Component({
   selector: 'app-root',
@@ -7,30 +8,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'learnApp';
-  x = 16;
-  y = 14;
-  z = 6;
+  constructor (public tokenService: TokenService){}
 
-  sum(n: number, m: number){
-    return n + m;
-  }
+  // title = 'learnApp';
+  // x = 16;
+  // y = 14;
+  // z = 6;
 
-  fibo(a : number){
+  // sum(n: number, m: number){
+  //   return n + m;
+  // }
 
-    let fseries : number[] = [];
-    let temp1 = 0;
-    let temp2 = 1;
+  // fibo(a : number){
+
+  //   let fseries : number[] = [];
+  //   let temp1 = 0;
+  //   let temp2 = 1;
 
 
-    for(let i=1;i<=a;i++){
+  //   for(let i=1;i<=a;i++){
 
-      fseries.push(temp1);
-      let newtemp = temp1+temp2;
-      temp1 = temp2;
-      temp2 = newtemp;
-    }
+  //     fseries.push(temp1);
+  //     let newtemp = temp1+temp2;
+  //     temp1 = temp2;
+  //     temp2 = newtemp;
+  //   }
 
-    return fseries;
-  }
+  //   return fseries;
 }

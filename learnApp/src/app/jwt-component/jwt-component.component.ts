@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenService } from '../token.service';
 
 @Component({
   selector: 'app-jwt-component',
@@ -7,8 +8,15 @@ import { Component } from '@angular/core';
 })
 export class JwtComponentComponent {
 
+  userName: string = '';
+  password: string='' ;
+  roles: string = '';
+
+  constructor(private tokenService: TokenService){
+  }
+
   onSubmit(){
-    console.log("Form submitted");
+    this.tokenService.callService(this.userName,this.password,this.roles);
   }
 
 }

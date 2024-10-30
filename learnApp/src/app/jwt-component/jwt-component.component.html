@@ -1,13 +1,13 @@
-<h1> Register/Login </h1>
-<form>
+<h1> Login </h1>
+<form ngSubmit = "onSubmit()">
     <label for = ""> Enter Username: </label>
-    <input type = "text" name = "user_name" />
+    <input type = "text" [(ngModel)] = "userName" name = "userName1" />
     
     <label for = "password">  Enter Password: </label>
-    <input type = "text" name = "password" />
+    <input type = "password" [(ngModel)] = "password" name = "password1" />
 
     <label for = "roles"> Roles: </label>
-    <input type = "text" names = "roles" />
+    <input type = "text" [(ngModel)] = "roles" name = "roles1" />
 
-    <button (click) = "onSubmit()"> Register </button>
+    <button (click) =  "onSubmit()"> Login </button>
 </form>
