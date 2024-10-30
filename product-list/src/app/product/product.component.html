@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let product of products">
-      <td>{{ product.name }}</td>
+      <td>{{ product.name | uppercase}}</td>
       <td>{{ product.price | currency:'INR' }}</td>
       <td>{{ product.createdAt | date:'mediumDate' }}</td>
     </tr>

@@ -12,6 +12,7 @@ export class HttpComponent implements OnInit{
 
   products1: Product[] = [];
   products2: Product[] = [];
+  product: Product = new Product(101,"Phone","Samsung",10,1500000);
 
   constructor(private service: DataService){
 
@@ -33,11 +34,11 @@ export class HttpComponent implements OnInit{
   }
 
   addProduct() {
-    // this.service.addProduct(new Product(101,"Phone","Samsung",10,1500000)).subscribe(
-    //   (data) => {
-    //     this.products2.push(data);
-    //   }
-    // );
+    this.service.addProduct(this.product).subscribe(
+      { next: (data) => {this.product},
+        error: (err) => {console.error(err.error.error)}
+      }
+    );
   }
 
   updateProd(){
