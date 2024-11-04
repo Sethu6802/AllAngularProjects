@@ -10,7 +10,7 @@ export class AppComponent {
 
   constructor (public tokenService: TokenService){}
 
-  // title = 'learnApp';
+  title = 'learnApp';
   // x = 16;
   // y = 14;
   // z = 6;
