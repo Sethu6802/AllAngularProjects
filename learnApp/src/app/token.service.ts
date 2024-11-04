@@ -5,6 +5,7 @@ import { Observable, switchMap, tap } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TokenService {
 
   constructor(private http: HttpClient) {}
